@@ -30,6 +30,42 @@ public class API {
     private boolean active;
 
 
+    @Column(name = "fact_request_count")
+    private int factRequestCount = 0;
+
+    @Column(name = "qr_request_count")
+    private int qrRequestCount = 0;
+
+    @Column(name = "last_minute_reset")
+    private LocalDateTime lastMinuteReset;
+
+// getters and setters for all three
+
+    public int getFactRequestCount() {
+        return factRequestCount;
+    }
+
+    public void setFactRequestCount(int factRequestCount) {
+        this.factRequestCount = factRequestCount;
+    }
+
+    public int getQrRequestCount() {
+        return qrRequestCount;
+    }
+
+    public void setQrRequestCount(int qrRequestCount) {
+        this.qrRequestCount = qrRequestCount;
+    }
+
+    public LocalDateTime getLastMinuteReset() {
+        return lastMinuteReset;
+    }
+
+    public void setLastMinuteReset(LocalDateTime lastMinuteReset) {
+        this.lastMinuteReset = lastMinuteReset;
+    }
+
+// + getters and setters for all three
 
     private int requestCount;
     private LocalDateTime lastReset;
